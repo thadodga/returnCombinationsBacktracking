@@ -104,7 +104,7 @@ function init(elements, numberOfChainedElements) {
     var numberOfCombinations = tree.getNumberOfCombinations();
     var combinations = tree.getCombinationOfNodes();
     console.log(tree);
-    console.log(numberOfCombinations);
+    console.log("number of combinations: " + numberOfCombinations);
     console.log(combinations);
 }
 var elements = [1, 2, 3];

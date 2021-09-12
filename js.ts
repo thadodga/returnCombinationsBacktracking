@@ -143,7 +143,7 @@ function init(elements: any[],numberOfChainedElements?: number) {
   const numberOfCombinations: number = tree.getNumberOfCombinations();
   const combinations: any[][] = tree.getCombinationOfNodes();
   console.log(tree);
-  console.log(numberOfCombinations);
+  console.log("number of combinations: " + numberOfCombinations);
   console.log(combinations);
   
 }
