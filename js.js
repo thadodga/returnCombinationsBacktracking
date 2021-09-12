@@ -1,8 +1,8 @@
 var Tree = /** @class */ (function () {
-    function Tree(times, numberOfElements) {
+    function Tree(label, numberOfElements) {
         this.numberOfElements = numberOfElements;
-        this.times = times;
-        this.root = new treeNode("XXX", this.times, null, numberOfElements);
+        this.label = label;
+        this.root = new treeNode("XXX", this.label, null, numberOfElements);
     }
     Tree.prototype.getAllNodesBFS = function (rootNode) {
         var node = rootNode;
@@ -53,13 +53,13 @@ var Tree = /** @class */ (function () {
     return Tree;
 }());
 var treeNode = /** @class */ (function () {
-    function treeNode(label, possibleChildrenTimes, parentNode, numberOfElements) {
+    function treeNode(label, possibleChildrenLabels, parentNode, numberOfElements) {
         this.parentNode = null;
         this.children = [];
         this.levelsToFirstLayer = 0;
         this.parentNode = parentNode;
         this.label = label;
-        this.possibleChildrenTimes = possibleChildrenTimes;
+        this.possibleChildrenLabels = possibleChildrenLabels;
         this.numberOfElements = numberOfElements;
         this.createChildren();
         this.isLastNode = this.isLast();
@@ -73,11 +73,11 @@ var treeNode = /** @class */ (function () {
         this.children.push(child);
     };
     treeNode.prototype.setPossibleChildren = function (el) {
-        var timesCopy = JSON.parse(JSON.stringify(this.possibleChildrenTimes));
-        var indexToRemove = timesCopy.indexOf(el);
+        var labelsCopy = JSON.parse(JSON.stringify(this.possibleChildrenLabels));
+        var indexToRemove = labelsCopy.indexOf(el);
         if (indexToRemove !== -1)
-            timesCopy.splice(indexToRemove, 1);
-        return timesCopy;
+            labelsCopy.splice(indexToRemove, 1);
+        return labelsCopy;
     };
     treeNode.prototype.createChildren = function () {
         var _this = this;
@@ -107,5 +107,5 @@ function init(elements, numberOfChainedElements) {
     console.log(numberOfCombinations);
     console.log(combinations);
 }
-var elements = ["a", "b", "c", "d"];
-init(elements, 4);
+var elements = [1, 2, 3];
+init(elements, 2);

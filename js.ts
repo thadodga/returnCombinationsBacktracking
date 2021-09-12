@@ -2,15 +2,15 @@
 
 class Tree {
   public root: treeNode;
-  private times: any[];
+  private label: any[];
 
   private numberOfElements: number;
 
 
-  constructor(times: any[], numberOfElements: number) {
+  constructor(label: any[], numberOfElements: number) {
     this.numberOfElements = numberOfElements;
-    this.times = times;
-    this.root = new treeNode("XXX", this.times, null, numberOfElements);
+    this.label = label;
+    this.root = new treeNode("XXX", this.label, null, numberOfElements);
    
   }
 
@@ -74,20 +74,20 @@ class treeNode {
   public parentNode: treeNode | null = null;
   public children: treeNode[] = [];
   public label: string;
-  private possibleChildrenTimes: string[];
+  private possibleChildrenLabels: string[];
   private levelsToFirstLayer: number = 0;
   private numberOfElements: number;
   public isLastNode: boolean;
 
   constructor(
     label: string,
-    possibleChildrenTimes: string[],
+    possibleChildrenLabels: string[],
     parentNode: treeNode | null,
     numberOfElements: number
   ) {
     this.parentNode = parentNode;
     this.label = label;
-    this.possibleChildrenTimes = possibleChildrenTimes;
+    this.possibleChildrenLabels = possibleChildrenLabels;
     this.numberOfElements = numberOfElements;
     this.createChildren();
     this.isLastNode = this.isLast();
@@ -104,12 +104,12 @@ class treeNode {
   }
 
   private setPossibleChildren(el: string): string[] {
-    const timesCopy: string[] = JSON.parse(
-      JSON.stringify(this.possibleChildrenTimes)
+    const labelsCopy: string[] = JSON.parse(
+      JSON.stringify(this.possibleChildrenLabels)
     );
-    const indexToRemove: number = timesCopy.indexOf(el);
-    if (indexToRemove !== -1) timesCopy.splice(indexToRemove, 1);
-    return timesCopy;
+    const indexToRemove: number = labelsCopy.indexOf(el);
+    if (indexToRemove !== -1) labelsCopy.splice(indexToRemove, 1);
+    return labelsCopy;
   }
 
   private createChildren() {
@@ -149,5 +149,5 @@ function init(elements: any[],numberOfChainedElements?: number) {
 }
 
 
-const elements: any[] = ["a", "b", "c", "d"];
-init(elements, 4);
+const elements: any[] = [1,2,3];
+init(elements, 2);
