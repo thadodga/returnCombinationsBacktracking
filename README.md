@@ -13,7 +13,7 @@ In the function "init" at the bottom of the file, you could enter the array [1,2
 If you do not provide a value for the maximum amount of combined elements, all possible combinations will be returned. 
 
 Please note:
-This script does not come with a UI. Changes need to be done in the actual TyepeScript file. The outcome will be written to console once you've compiled the TypeScript and 
+This script does not come with a UI. Changes need to be done in the actual TypeScript file. The outcome will be written to console once you've compiled the TypeScript and 
 open the index.html file.
 
 
