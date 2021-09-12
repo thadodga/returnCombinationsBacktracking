@@ -25,7 +25,7 @@ class Tree {
           node = queue.shift();
           nodeArray.push(node);
           node.children.forEach(node => {
-              if (node && node) {
+              if (node) {
                   queue.push(node);
               }
           });

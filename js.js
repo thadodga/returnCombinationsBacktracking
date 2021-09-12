@@ -13,7 +13,7 @@ var Tree = /** @class */ (function () {
             node = queue.shift();
             nodeArray.push(node);
             node.children.forEach(function (node) {
-                if (node && node) {
+                if (node) {
                     queue.push(node);
                 }
             });
