@@ -14,6 +14,5 @@ If you do not provide a value for the maximum amount of combined elements, all p
 
 Please note:
 This script does not come with a UI. Changes need to be done in the actual TypeScript file. The outcome will be written to console once you've compiled the TypeScript and 
-open the index.html file.
-
+opened the index.html file. Alternatively, after compiling, you could just run the script with 'node js.js'.
 
