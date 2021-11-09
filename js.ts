@@ -61,7 +61,7 @@ class Tree {
 
   private getChainOfNodes(node: treeNode, chain){
    
-    while (node.label !== "XXX") {
+    if (node.label !== "XXX") {
       chain.push(node.label);
       return this.getChainOfNodes(node.parentNode, chain);
     }
@@ -128,7 +128,7 @@ class treeNode {
   }
 
   private howManyLayersToTop(parentNode: treeNode): number {
-    while (parentNode.label !== "XXX") {
+    if (parentNode.label !== "XXX") {
       this.levelsToFirstLayer++;
       return this.howManyLayersToTop(parentNode.parentNode);
     }
