@@ -31,7 +31,7 @@ class Tree {
           });
       }
 
-      return nodeArray || [];
+      return nodeArray;
   }
 
   private getLastNodes(): treeNode[]{
