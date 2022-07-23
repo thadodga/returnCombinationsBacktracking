@@ -1,5 +1,5 @@
 # returnCombinationsBacktracking
-A backtracking algorithm that returns all the possible combinations of given elements with an optional paramater for the depth of the tree, i.e. the amount of elements that
+A backtracking algorithm that returns all the possible combinations of given elements with an optional parameter for the depth of the tree, i.e. the amount of elements that
 can be chained together. 
 
 For example: 
